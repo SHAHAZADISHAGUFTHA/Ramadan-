@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: italic;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo{
+    position: relative;
+    color: #ff5e8e;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 800;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s; 
+}
+@keyframes slide_left{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: #0169b2;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 0.2s; 
+}
+@keyframes slide_top{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+header ul li a:hover{
+    background: #0169b2;
+    color: #fff;
+    border-radius: 30px;
+}
+.content{
+    position: relative;
+    display: flex;
+}
+.content .textBox{
+    max-width: 550px;
+}
+.content .textBox h2{
+    color: #0169b2;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 700 ;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s; 
+}
+@keyframes slide_left{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.content .textBox p{
+    font-size: 1.2em;
+    color: #333;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 0.2s; 
+}
+@keyframes slide_right{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.mosque{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 700px; 
+}
+@media (max-width: 991px){
+    section{padding: 150px 20px;}
+    header{padding: 20px;}
+    .navigation{display: none;}
+}
